@@ -78,7 +78,7 @@ $rowsSecondaryCategory = $resultSecondaryCategory->fetch_all(MYSQLI_ASSOC);
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <title>
-        Argon Dashboard 2 by Creative Tim
+        商品管理列表
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -367,7 +367,7 @@ $rowsSecondaryCategory = $resultSecondaryCategory->fetch_all(MYSQLI_ASSOC);
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../product_pages/product-list.php">
+                    <a class="nav-link active" href="../product_pages/product-list.php">
                         <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fa-sharp fa-solid fa-leaf text-dark text-sm opacity-10 fa-fw"></i>
                             <!-- <i class="ni ni-credit-card text-success text-sm opacity-10"></i> -->
@@ -403,7 +403,7 @@ $rowsSecondaryCategory = $resultSecondaryCategory->fetch_all(MYSQLI_ASSOC);
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="../teachers_pages/teachers.php">
+                    <a class="nav-link " href="../teachers_pages/teachers.php">
                         <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fa-solid fa-user-tie text-dark text-sm opacity-10 fa-fw"></i>
                             <!-- <i class="ni ni-world-2 text-danger text-sm opacity-10"></i> -->
@@ -573,15 +573,15 @@ $rowsSecondaryCategory = $resultSecondaryCategory->fetch_all(MYSQLI_ASSOC);
                                 <?php if ($rowsCount > 0) : ?>
                                     <table class="table align-items-center mb-0">
                                         <thead>
-                                            <tr>
-                                                <th class="text-secondary text-s text-center font-weight-bolder opacity-7">id</th>
-                                                <th class="text-secondary text-s font-weight-bolder opacity-7">商品名稱</th>
-                                                <th class="text-secondary text-s font-weight-bolder opacity-7 ps-2">價錢</th>
-                                                <th class="text-secondary text-s font-weight-bolder opacity-7 ps-2">庫存</th>
-                                                <th class="text-center text-uppercase text-secondary text-s font-weight-bolder opacity-7">更新時間</th>
-                                                <th class="text-secondary text-center opacity-7"></th>
-                                                <th class="text-secondary text-center opacity-7"></th>
-                                                <th class="text-secondary text-center opacity-7"></th>
+                                            <tr class="font-weight-bolder">
+                                                <th class="text-secondary  text-center ">ID</th>
+                                                <th class="text-secondary text-center">商品名稱</th>
+                                                <th class="text-secondary text-center">價錢</th>
+                                                <th class="text-secondary text-center">庫存</th>
+                                                <th class="text-center  text-secondary ">更新時間</th>
+                                                <th class="text-secondary text-center "></th>
+                                                <th class="text-secondary text-center "></th>
+                                                <th class="text-secondary text-center "></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -590,20 +590,18 @@ $rowsSecondaryCategory = $resultSecondaryCategory->fetch_all(MYSQLI_ASSOC);
                                             foreach ($rows as $product) : ?>
                                                 <tr>
                                                     <td>
-                                                        <h6 class="mb-0 text-m text-center"><?= $product["id"] ?></h6>
+                                                        <p class="mb-0 text-m text-center"><?= $product["id"] ?></p>
                                                     </td>
-                                                    <td>
-                                                        <div class="d-flex px-2 py-1">
-                                                            <div class="d-flex flex-column justify-content-center">
+                                                    <td class="text-center">
+                                                        
                                                                 <h6 class="mb-0 text-m"><?= $product["name"] ?></h6>
-                                                            </div>
-                                                        </div>
+                                                           
                                                     </td>
-                                                    <td>
-                                                        <h6 class="mb-0 text-m"><?= $product["price"] ?></h6>
+                                                    <td class="text-center">
+                                                        <h6 class="mb-0 "><?= $product["price"] ?></h6>
                                                     </td>
-                                                    <td>
-                                                        <h6 class="mb-0 text-m"><?= $product["amount"] ?></h6>
+                                                    <td class="text-center">
+                                                        <h6 class="mb-0 "><?= $product["amount"] ?></h6>
                                                     </td>
                                                     <td class="align-middle text-center">
                                                         <span class="text-secondary text-m font-weight-bold"><?= $product["change"] ?></span>
@@ -634,6 +632,7 @@ $rowsSecondaryCategory = $resultSecondaryCategory->fetch_all(MYSQLI_ASSOC);
 
             <!-- 在搜尋的情況下不顯示分頁 -->
             <?php if (!isset($_GET["search"]) && !isset($_GET["secondaryCategorySearch"])) : ?>
+                <div class="d-flex justify-content-center">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">
                         <?php for ($i = 1; $i <= $pageCount; $i++) : ?>
@@ -645,6 +644,7 @@ $rowsSecondaryCategory = $resultSecondaryCategory->fetch_all(MYSQLI_ASSOC);
                         <?php endfor; ?>
                     </ul>
                 </nav>
+                </div>
             <?php endif; ?>
         <?php endif; ?>
         </div>
