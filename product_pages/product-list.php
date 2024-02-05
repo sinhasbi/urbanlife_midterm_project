@@ -580,8 +580,7 @@ $rowsSecondaryCategory = $resultSecondaryCategory->fetch_all(MYSQLI_ASSOC);
                                                 <th class="text-secondary text-center">庫存</th>
                                                 <th class="text-center  text-secondary ">更新時間</th>
                                                 <th class="text-secondary text-center "></th>
-                                                <th class="text-secondary text-center "></th>
-                                                <th class="text-secondary text-center "></th>
+                                                
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -607,14 +606,12 @@ $rowsSecondaryCategory = $resultSecondaryCategory->fetch_all(MYSQLI_ASSOC);
                                                         <span class="text-secondary text-m font-weight-bold"><?= $product["change"] ?></span>
                                                     </td>
                                                     <td class="align-middle text-center">
-                                                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#read<?= $product["id"] ?>">
+                                                        <button class="btn btn-primary me-2" type="button" data-bs-toggle="modal" data-bs-target="#read<?= $product["id"] ?>">
                                                             <i class="fa-solid fa-eye fa-fw"></i>
                                                         </button>
-                                                    </td>
-                                                    <td class="align-middle text-center">
-                                                        <a href="update-product.php?id=<?= $product["id"] ?>" class="btn btn-success" role="button"><i class="fa-solid fa-pen-to-square fa-fw"></i></a>
-                                                    </td>
-                                                    <td class="align-middle text-center">
+                                                    
+                                                        <a href="update-product.php?id=<?= $product["id"] ?>" class="btn btn-success me-2" role="button"><i class="fa-solid fa-pen-to-square fa-fw"></i></a>
+                                                    
                                                         <button class="btn btn-danger" type="button" role="button" data-bs-toggle="modal" data-bs-target="#delete<?= $product["id"] ?>">
                                                             <i class="fa-solid fa-trash-can fa-fw"></i>
                                                         </button>
