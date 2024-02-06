@@ -560,8 +560,8 @@ $rowsSecondaryCategory = $resultSecondaryCategory->fetch_all(MYSQLI_ASSOC);
                                 <div class="d-flex">
                                     <div class="me-2">排序</div>
                                     <div class="btn-group">
-                                        <a class="btn btn-primary <?php if ($order == 1) echo "active" ?>" href="product-list.php?order=1&p=<?= $p ?>">ID<i class="fa-solid fa-arrow-down-short-wide fa-fw"></i></a>
-                                        <a class="btn btn-primary <?php if ($order == 2) echo "active" ?>" href="product-list.php?order=2&p=<?= $p ?>">ID<i class="fa-solid fa-arrow-down-wide-short fa-fw"></i></a>
+                                        <a class="btn btn-primary <?php if ($order == 1) echo "active" ?>" href="product-list.php?order=1&p=<?= $p ?>">商品編號<i class="fa-solid fa-arrow-down-short-wide fa-fw"></i></a>
+                                        <a class="btn btn-primary <?php if ($order == 2) echo "active" ?>" href="product-list.php?order=2&p=<?= $p ?>">商品編號<i class="fa-solid fa-arrow-down-wide-short fa-fw"></i></a>
                                         <a class="btn btn-primary <?php if ($order == 3) echo "active" ?>" href="product-list.php?order=3&p=<?= $p ?>">更新時間<i class="fa-solid fa-arrow-down-short-wide fa-fw"></i></a>
                                         <a class="btn btn-primary <?php if ($order == 4) echo "active" ?>" href="product-list.php?order=4&p=<?= $p ?>">更新時間<i class="fa-solid fa-arrow-down-wide-short fa-fw"></i></a>
                                     </div>
@@ -574,7 +574,7 @@ $rowsSecondaryCategory = $resultSecondaryCategory->fetch_all(MYSQLI_ASSOC);
                                     <table class="table align-items-center mb-0">
                                         <thead>
                                             <tr class="font-weight-bolder">
-                                                <th class="text-secondary  text-center ">ID</th>
+                                                <th class="text-secondary  text-center ">商品編號</th>
                                                 <th class="text-secondary text-center">商品名稱</th>
                                                 <th class="text-secondary text-center">價錢</th>
                                                 <th class="text-secondary text-center">庫存</th>
