@@ -451,7 +451,7 @@ if (isset($_GET["search"])) {
                                                                                                 </div>
                                                                                             </td>
                                                                                         </tr>
-                                                                                        <tr>
+                                                                                        <tr class="border-end">
                                                                                             <th>報名狀況</th>
                                                                                             <td>
                                                                                                 <?php

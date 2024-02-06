@@ -434,43 +434,43 @@ if(isset($_GET["search"])){
                                               <img class="object-fit-cover img-fluid mx-auto" src="../teachers_images/<?= $row["img"] ?>" alt="<?= $row["name"] ?>">
                                             </div>
                                         </tr> -->
-                                        <tr>
+                                        <tr class="border-end">
                                           <th class="p-3 text-center">ID</th>
                                           <td class="p-3">
                                             <?= $row["id"] ?>
                                           </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="border-end">
                                           <th class="p-3 text-center">講師姓名</th>
                                           <td class="p-3">
                                             <?= $row["name"] ?>
                                           </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="border-end">
                                           <th class="p-3 text-center">性別</th>
                                           <td class="p-3">
                                             <?= $row["gender"] ?>
                                           </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="border-end">
                                           <th class="p-3 text-center">手機號碼</th>
                                           <td class="p-3">
                                             <?= $row["phone"] ?>
                                           </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="border-end">
                                           <th class="p-3 text-center">信箱</th>
                                           <td class="p-3">
                                             <?= $row["email"] ?>
                                           </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="border-end">
                                           <th class="p-3 text-center">講師介紹</th>
                                           <td class="text-wrap p-3">
                                             <?= $row["intro"] ?>
                                           </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="border-end">
 
                                           <th class="p-3 text-center">教授課程</th>
                                           <td class="border-end p-3">
@@ -513,11 +513,11 @@ if(isset($_GET["search"])){
 
                                     <input type="hidden" name="id" value="<?=$row["id"]?>">
                                     <table class="table table-bordered">
-                                      <tr>
+                                      <tr class="border-end">
                                         <th>講師姓名:</th>
                                         <td><input type="text" class="form-control" value="<?= $row["name"]?>" name="name" oninput="checkNameLength(this)"></td>
                                       </tr>
-                                      <tr>
+                                      <tr class="border-end">
                                         <th>性別:</th>
                                         <td>
                                           <select placeholder="請選擇性別" name="gender" id="" class="form-select">
@@ -528,11 +528,11 @@ if(isset($_GET["search"])){
                                         </td>
                                         <!-- <td><input type="text" class="form-control" value="<?= $row["gender"]?>" name="gender"></td> -->
                                       </tr>
-                                      <tr>
+                                      <tr class="border-end">
                                         <th>手機號碼:</th>
                                         <td><input type="text" class="form-control" value="<?= $row["phone"]?>" name="phone" oninput="checkPhoneLength(this)"></td>
                                       </tr>
-                                      <tr>
+                                      <tr class="border-end">
                                         <th>信箱:</th>
                                         <td><input type="email" class="form-control" value="<?= $row["email"]?>" name="email" oninput="checkEmailLength(this)"></td>
                                       </tr>

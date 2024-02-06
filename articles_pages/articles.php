@@ -478,7 +478,7 @@ else {
                                               <th>文章內文</th>
                                               <td class="text-wrap"><?= $article["content"] ?></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="border-end">
                                               <th>圖片</th>
                                               <td>
                                                 <?php if (isset($article["filename"])) : ?>
@@ -489,11 +489,11 @@ else {
                                               </td>
 
                                             </tr>
-                                            <tr>
+                                            <tr class="border-end">
                                               <th>發文者</th>
                                               <td><?= $article["user_name"] ?></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="border-end">
                                               <th>更新時間</th>
                                               <td><?= $article["update"] ?></td>
                                             </tr>
@@ -548,9 +548,9 @@ else {
                                             <textarea class="form-control" name="editContent" rows="4"><?= $article["content"] ?> </textarea>
                                           </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="border-end">
                                           <th>照片</th>
-                                          <td>
+                                          <td class="border-end">
                                             <?php if (isset($article["filename"])) : ?>
                                               <div class="ratio ratio-1x1" style="max-width: 200px;">
                                                 <img src="../articles_picture/<?= $article["filename"] ?>" alt="">
@@ -608,7 +608,7 @@ else {
     <?php if ((!isset($_GET["search"]) || $_GET["search"] == "") && !isset($_GET["cate"])) : ?>
     <nav aria-label="Page navigation example">
       <ul class="pagination">
-        <?php for ($i = 1; $i <= $pageCount; $i++) : ?>
+        <?php for ($i = 1; $i < $pageCount; $i++) : ?>
           <li class="page-item <?php if ($i == $p) echo "active" ?>">
             <a class="page-link" href="articles.php?order=<?= $order ?>&p=<?= $i ?>"><?= $i ?></a>
 

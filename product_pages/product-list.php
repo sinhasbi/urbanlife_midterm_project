@@ -189,7 +189,7 @@ $rowsSecondaryCategory = $resultSecondaryCategory->fetch_all(MYSQLI_ASSOC);
                                                 <?= $product["description"] ?>
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="border-end">
                                             <th>上次更新時間</th>
                                             <td>
                                                 <?= $product["change"] ?>
