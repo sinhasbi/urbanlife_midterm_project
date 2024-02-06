@@ -363,7 +363,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
 
                       <th class="text-center text-secondary">訂單編號</th>
                       <th class="text-center text-secondary">購買商品</th>
-                      <th class="text-center text-secondary">訂單總價</th>
+                      <!-- <th class="text-center text-secondary">訂單總價</th> -->
                       <th class="text-center  text-secondary">購買人</th>
                       <th class="text-center  text-secondary">成立時間</th>
                       <th class="text-center  text-secondary">訂單狀態</th>
