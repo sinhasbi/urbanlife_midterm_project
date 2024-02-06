@@ -523,15 +523,15 @@ if (!empty($search)) {
 
                                                                                 <input type="hidden" name="id" value="<?= $coupon["id"] ?>">
                                                                                 <table class="table table-bordered">
-                                                                                    <tr>
+                                                                                    <tr class="border-end">
                                                                                         <th>優惠券名稱:</th>
                                                                                         <td><input type="text" class="form-control" value="<?= $coupon["name"] ?>" name="name"></td>
                                                                                     </tr>
-                                                                                    <tr>
+                                                                                    <tr class="border-end">
                                                                                         <th>優惠券代碼:</th>
                                                                                         <td><input type="text" class="form-control" value="<?= $coupon["code"] ?>" name="code"></td>
                                                                                     </tr>
-                                                                                    <tr>
+                                                                                    <tr class="border-end">
                                                                                         <th>適用狀況:</th>
 
                                                                                         <td>
@@ -545,7 +545,7 @@ if (!empty($search)) {
                                                                                             </select>
                                                                                         </td>
                                                                                     </tr>
-                                                                                    <tr>
+                                                                                    <tr class="border-end">
                                                                                         <th>種類面額:</th>
                                                                                         <td>
                                                                                             <div class="form-check form-check-inline">
@@ -559,7 +559,7 @@ if (!empty($search)) {
                                                                                             <input type="number" class="form-control" id="amount" value="<?= $coupon["amount"] ?>" name="amount" step="0.01">
                                                                                         </td>
                                                                                     </tr>
-                                                                                    <tr>
+                                                                                    <tr class="border-end">
                                                                                         <th>優惠券狀態:</th>
                                                                                         <td>
                                                                                             <div class="form-check">
@@ -577,7 +577,7 @@ if (!empty($search)) {
                                                                                             </div>
                                                                                         </td>
                                                                                     </tr>
-                                                                                    <tr>
+                                                                                    <tr class="border-end">
                                                                                         <th>低消金額:</th>
                                                                                         <td><input type="number" class="form-control" id="min_price" value="<?= $coupon["min_price"] ?>" name="min_price"></td>
                                                                                     </tr>
@@ -617,7 +617,7 @@ if (!empty($search)) {
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="exampleModalLabel">刪除使用者</h1>
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">刪除優惠券</h1>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">

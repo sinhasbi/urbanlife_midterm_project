@@ -7,7 +7,7 @@ $resultAll = $conn->query($sqlAll);
 $rowsAll = $resultAll->fetch_all(MYSQLI_ASSOC);
 $rowsTotalCount = $resultAll->num_rows;
 // 每頁顯示
-$perPage = 15;
+$perPage = 8;
 // 共有幾頁
 $pageCount = ceil($rowsTotalCount / $perPage);
 // 排序
@@ -321,7 +321,7 @@ $rowsSecondaryCategory = $resultSecondaryCategory->fetch_all(MYSQLI_ASSOC);
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">刪除使用者</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">刪除商品</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">

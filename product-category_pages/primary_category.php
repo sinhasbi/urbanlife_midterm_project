@@ -268,7 +268,7 @@
         <li class="nav-item">
           <a class="nav-link " href="../lecture_pages/lecture.php">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="fa-solid fa-ticket-simple text-dark text-sm opacity-10 fa-fw"></i>
+            <i class="fa-solid fa-graduation-cap text-dark text-sm opacity-10 fa-fw"></i>
             </div>
             <span class="nav-link-text ms-1">課程管理</span>
           </a>
