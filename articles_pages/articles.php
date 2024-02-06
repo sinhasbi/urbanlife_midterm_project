@@ -146,12 +146,12 @@ $stmt->close();
 
 
 
-// if (isset($_GET["search"])&& $_GET["search"]!="") { 
-//   $rowsCount = $result->num_rows;
-// } 
-// else { 
-//   $rowsCount = $articleTotalCount;
-// }
+if (isset($_GET["search"])&& $_GET["search"]!="") { 
+  $rowsCount = $result->num_rows;
+} 
+else { 
+  $rowsCount = $resultAll->num_rows;
+}
 
 ?>
 
@@ -395,7 +395,7 @@ $stmt->close();
                   <?= $rowsCount ?>
                   筆
                 </div>
-                <?php if (!isset($_GET["cate"]) ) :; ?>
+                <?php if ((!isset($_GET["search"]) || $_GET["search"] == "") && !isset($_GET["cate"])) : ?>
                 <div class="d-flex">
                   <div class="me-2">排序</div>
                   <div class="btn-group">

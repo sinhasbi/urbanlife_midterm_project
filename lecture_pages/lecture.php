@@ -29,7 +29,7 @@ if (isset($_GET["search"])) {
     FROM lecture
     JOIN teacher ON lecture.teacher_id = teacher.id
     JOIN lecture_location AS location ON lecture.location = location.id
-    WHERE lecture.name LIKE '$search'";
+    WHERE lecture.name LIKE '$search' OR teacher.name LIKE '$search' OR location.name LIKE '$search'";
     $result = $conn->query($sql);
     $lectureCount = $result->num_rows;
 } elseif (isset($_GET["p"])) {
@@ -270,7 +270,7 @@ if (isset($_GET["search"])) {
                             <div class="row g-3">
                                 <?php if (isset($_GET["search"])) : ?>
                                     <div class="col-auto">
-                                        <a name="" id="" class="btn btn-primary" href="lecture.php" role="button"><i class="fa-solid fa-house-user fa-fw"></i></a>
+                                        <a name="" id="" class="btn btn-primary" href="lecture.php" role="button"><i class="fa-solid fa-angles-left fa-fw"></i></a>
                                     </div>
                                 <?php endif; ?>
                                 <div class="col">
